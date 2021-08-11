@@ -1,38 +1,207 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.mainHeader
+{
+  width:100%;
+  height: auto;
+  background-color:rgb(23,23,23) ;
+  display: flex;
+  align-items: center;
+}
+.mainHeader .title{
+  width:20%;
+  font-size:1.8rem;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}
+.mainHeader .searchBar
+{
+width:80%;
+display: flex;
+justify-content: center;
+margin: 1.5rem 0rem 1.5rem 0rem;
+height: auto;
+}
+.searchBar input[type=search]
+{
+  width:60%;
+  height: 2.5rem;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 0rem 1rem 0rem 1rem;
+  border: none;
+  border-radius: .4rem;
+}
+
+.displayContainerfirst
+{
+  width:100%;
+  height: auto;
+  background-color: rgb(240, 233, 233);
+  display: flex;
+  flex-flow: wrap;
+  justify-content:space-around;
+  margin-bottom: 2rem;
+}
+.characterBox
+{
+  width:20%;
+  background-color: white;
+  height: auto;
+  margin: 3rem 0 2rem 0;
+  box-shadow: 0px 3px 8px rgb(100,100,100);
+  border-radius: .5rem;
+}
+.imagebox
+{
+  width: 100%;
+  height:22rem;
+}
+.characterBox img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem .5rem 0rem 0rem;
+}
+.infobox
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.labelbox
+{
+  width:50%;
   text-align: center;
+  margin: .5rem 0rem .5rem 0rem;
+}
+.characterinfo
+{
+  width: 50%;
+  height: auto;
+  margin: .5rem 0rem .5rem 0rem;
+  text-align: left;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+.sectionBox
+{
+width:100%;
+display: flex;
+justify-content: center;
+}
+.buttonBox
+{
+  width:50%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.pagenumberButton
+{
+  width: 7%;
+  background-color: rgb(206, 99, 0);
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  height:2.5rem;
+  border:1px solid white;
+  cursor: pointer;
+}
+.pagenumberButton:hover
+{
+  background-color: green;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media screen and (max-width:1280px) {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .pagenumberButton
+  {
+    width: 10%;
+  }
+  .characterBox
+  {
+    width: 30%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width:990px) {
+  
+  .mainHeader .title
+{
+  width: 40%;
+  margin-top: 1rem;
+}
+  .characterBox
+  {
+    width: 46%;
+  }
+  .buttonBox
+  {
+    width:45%;
+  }
+  .pagenumberButton
+  {
+    width: 15%;
+  }
+}
+@media screen and (max-width:800px) {
+  .mainHeader .title
+{
+  width: 40%;
+  margin-top: 1rem;
+}
+  .characterBox
+  {
+    width: 50%;
+  }
+  .buttonBox
+  {
+    width:55%;
+  }
+}
+@media screen and (max-width:580px) {
+  .mainHeader
+{
+  width:100%;
+  height: auto;
+  background-color:rgb(23,23,23) ;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.mainHeader .title
+{
+  width: 100%;
+  margin-top: 1rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainHeader .searchBar
+{
+  margin-top: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+  .characterBox
+{
+  width: 90%;
+}
+.buttonBox
+{
+  width:65%;
+}
+}
+@media screen and (max-width:370px) {
+  .buttonBox
+{
+  width:95%;
+}
 }

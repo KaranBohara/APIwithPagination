@@ -51,6 +51,7 @@ pageNumberClick(e)
 {
   const char_id=e.target.value;
   this.setState({
+    search:'',
     char_id
   })
   this.getData();
@@ -77,19 +78,21 @@ this.getData();
       }
       
     })
-
-    const characterData=this.state.data.filter((item)=>{
+    const characterData=this.state.data.filter((item,index)=>{
        if(this.state.search==="")
        {
-            return item;
+        if((index>=this.state.char_id-10) && index<this.state.char_id)
+
+                {
+                  return item;
+                }     
        }
        else if(item.name.toLowerCase().includes(this.state.search.toLowerCase()))
        {
               return item;
        }
-    }).map((item,index)=>
-    {
-      if((index>=this.state.char_id-10) && index<this.state.char_id)
+    }).map((item)=>
+    {  
       {
         return( 
           <div className="characterBox">
@@ -146,7 +149,6 @@ this.getData();
             </div>
           <div className="displayContainerfirst">
              {characterData}
-             {console.log(this.state.search)}
             </div>
         </>
       );
